@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/local_details/add')
+    #form-group
+      label Serial Number:
+      input.form-control(name='s_no', type='text')
+    #form-group
+      label Type of Local Training:
+      input.form-control(name='type', type='text')
+    #form-group
+      label Program Name:
+      textarea.form-control(name='program_name', type='text')
+    #form-group
+      label File Number:
+      input.form-control(name='file_num', type='text')
+    #form-group
+      label No of trainees from Customs:
+      input.form-control(name='custom_trainees', type='text')
+    #form-group
+      label Number of other trainees:
+      input.form-control(name='other_trainees', type='text')
+    #form-group
+      label Benefitted:
+      input.form-control(name='benefitted', type='text')
+    #form-group
+      label Cost:
+      input.form-control(name='cost', type='text')
+    #form-group
+      label Voted/Com & C:
+      input.form-control(name='voted', type='text')
+    #form-group
+      label Comments:
+      input.form-control(name='comment', type='text')
+    br
+    input.btn.btn-primary(type='submit', value='Submit')

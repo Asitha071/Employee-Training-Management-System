@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/reim/add')
+    #form-group
+      label University:
+      input.form-control(name='uni', type='text')
+    #form-group
+      label File Number:
+      input.form-control(name='file_num', type='text')
+    #form-group
+      label Name:
+      textarea.form-control(name='name', type='text')
+    #form-group
+      label Designation:
+      input.form-control(name='desi', type='text')
+    #form-group
+      label Receipt number:
+      input.form-control(name='receipt', type='text')
+    #form-group
+      label Course:
+      input.form-control(name='course', type='text')
+    #form-group
+      label Completed status:
+      input.form-control(name='cstatus', type='Boolean')
+    #form-group
+      label Course fee:
+      input.form-control(name='cost', type='Number')
+    #form-group
+      label 1 st installemnt:
+      input.form-control(name='first', type='Number')
+    #form-group
+      label 2 nd installment:
+      input.form-control(name='second', type='Number')
+    #form-group
+      label Start date:
+      input.form-control(name='start_date', type='text')
+    #form-group
+      label Duration:
+      input.form-control(name='duration', type='text')
+    #form-group
+      label Completed year:
+      input.form-control(name='year', type='number')
+    br
+    input.btn.btn-primary(type='submit', value='Submit')

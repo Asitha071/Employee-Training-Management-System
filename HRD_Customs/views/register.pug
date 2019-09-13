@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  head
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/regstyle.css')
+  body  
+      
+      
+      .reg  
+         .regstertag
+          p Register
+         br
+         hr
+         form(method='POST', action='/users/register')
+          
+            label(for='name') First Name:  
+            input.form-control(name='first_name', type='text')
+          
+            label Last Name:
+            input.form-control(name='last_name', type='text')
+          
+            label Email:
+            input.form-control(name='email', type='text' )
+          
+            label Username:
+            input.form-control(name='username', type='text')
+          
+            label Password:
+            input.form-control(name='password', type='password')
+          
+            label Confirm: 
+            input.form-control(name='password2', type='password')
+            br
+            hr
+            
+            span.
+            h4 already registerd
+             a(href="login")  click here
+          
+            input.btn.btn-primary(type='submit', value='Register')

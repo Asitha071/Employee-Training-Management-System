@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  br
+  h1 #{local_detail.program_name}
+  br
+  h5 Serial Number : #{local_detail.s_no}
+  h5 Type of Local Training: #{local_detail.type}
+  h5 File Number : #{local_detail.file_num}
+  h5 No of trainees from Customs : #{local_detail.custom_trainees}
+  h5 No of other trainees : #{local_detail.other_trainees}
+  h5 Benefitted : #{local_detail.benefitted}
+  h5 Cost : #{local_detail.cost}
+  h5 Voted/Com & C : #{local_detail.voted}
+  h5 Comments : #{local_detail.comment}
+  hr
+  a.btn.btn-default(href='/local_details/edit/'+local_detail._id) Edit
+  a.btn.btn-default(href='/local_details/assign/'+local_detail._id) Assign
+  a.btn.btn-danger.delete-local_detail(href='#', data-id=local_detail._id) Delete

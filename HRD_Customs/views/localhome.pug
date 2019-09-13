@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 #{title}
+  ul.list-group
+    each local_detail, i in local_details
+      li.list-group-item
+        a(href="/local_details/"+local_detail._id)= local_detail.program_name

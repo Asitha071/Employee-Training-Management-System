@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  h1 #{title}
+  br
+  h3 #{foreign_detail.program_name}
+  br
+  form(method='POST', action='/foreign_details/edit/'+foreign_detail._id)
+    #form-group
+      label Date:
+      input.form-control(name='date', type='text' value=foreign_detail.date)
+    #form-group
+      label File Name:
+      input.form-control(name='file_name', type='text' value=foreign_detail.file_name)
+    #form-group
+      label Program name:
+      input.form-control(name='program_name', type='text' value=foreign_detail.program_name)
+    #form-group
+      label Start Date:
+      input.form-control(name='start_date', type='text' value=foreign_detail.start_date)
+    #form-group
+      label End Date:
+      input.form-control(name='end_date', type='text' value=foreign_detail.end_date)
+    #form-group
+      label Country:
+      input.form-control(name='country', type='text' value=foreign_detail.country)
+    #form-group
+      label Funds:
+      input.form-control(name='funds', type='text' value=foreign_detail.funds)
+    #form-group
+      label Amounts:
+      input.form-control(name='amounts', type='text' value=foreign_detail.amounts)
+    #form-group
+      label Travels:
+      input.form-control(name='travels', type='text' value=foreign_detail.travels)
+    br
+    input.btn.btn-primary(type='submit', value='Submit')

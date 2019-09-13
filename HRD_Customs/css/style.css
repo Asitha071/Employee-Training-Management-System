@@ -1,0 +1,22 @@
+@import "compass/css3";
+
+.alert-error{
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert-success_msg{
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+  .body {
+    font-family: tahoma;
+    height: 100vh;
+    min-height:550px;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+   }

@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  br
+  h1 #{foreign_detail.program_name}
+  br
+  h5 Date : #{foreign_detail.date}
+  h5 File Name: #{foreign_detail.file_name}
+  h5 Start Date : #{foreign_detail.start_date}
+  h5 End Date : #{foreign_detail.end_date}
+  h5 Country : #{foreign_detail.country}
+  h5 Funds : #{foreign_detail.funds}
+  h5 Amounts : #{foreign_detail.amounts}
+  h5 Travels : #{foreign_detail.travels}
+  hr
+  a.btn.btn-default(href='/foreign_details/edit/'+foreign_detail._id) Edit
+
+  a.btn.btn-danger.delete-foreign_detail(href='#', data-id=foreign_detail._id) Delete

@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 #{title}
+  ul.list-group
+    each foreign_detail, i in foreign_details
+      li.list-group-item
+        a(href="/foreign_details/"+foreign_detail._id)= foreign_detail.program_name

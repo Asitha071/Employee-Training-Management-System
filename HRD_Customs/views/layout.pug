@@ -1,0 +1,74 @@
+html
+  head
+   title Sri Lanka Customs
+   link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+   link(rel='stylesheet' href='/css/style.css')
+   style.
+     body {
+       font-family: tahoma;
+       height: 100vh;
+       min-height:550px;
+       background-image: url();
+       background-repeat: no-repeat;
+       background-size: cover;
+      }
+  body
+   nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+     a.navbar-brand(href='/') Sri Lanka Customs
+     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+       span.navbar-toggler-icon
+     #navbarsExampleDefault.collapse.navbar-collapse
+       ul.navbar-nav.mr-auto
+         li.nav-item
+           a.nav-link(href='/')
+             | Home 
+             span.sr-only (current)
+         li.nav-item.dropdown
+           a#dropdown01.nav-link.dropdown-toggle(href='/foreign_details/show', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Training
+           .dropdown-menu(aria-labelledby='dropdown01')
+             a.dropdown-item(href='/foreign_details/add') Foreign Training Add
+             a.dropdown-item(href='/local_details/add') Local Training Add
+             a.dropdown-item(href='/foreign_details/show') Foreign Training View
+             a.dropdown-item(href='/local_details/show') Local Training View
+         li.nav-item
+           a.nav-link(href='/Reimbursement_details') ReImbursement 
+         li.nav-item
+           a.nav-link(href='/graph_details') Graphs
+         li.nav-item
+           a.nav-link(href='/about_details') About 
+         li.nav-item
+           a.nav-link(href='/contact_details') Contact     
+       form.form-inline.my-2.my-lg-0
+         input.form-control.mr-sm-2(type='text', placeholder='Search', aria-label='Search')
+         button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+
+     ul.nav.navbar-nav.navbar-right
+       if user
+         li 
+           a.nav-link(href='/users/logout')
+             span.glyphicon.glyphicon-user
+             |  Logout
+       else
+         li
+           a.nav-link(href='/users/register') 
+             span.glyphicon.glyphicon-user
+             |  Register
+         li
+           a.nav-link(href='/users/login') 
+             span.glyphicon.glyphicon-log-in
+             |  Login 
+   .container
+     br
+     != messages('message', locals)
+     if errors
+       each error, i in errors
+         div(class="alert alert-danger") #{error.msg}
+     block content
+     br
+     hr
+     footer
+       p Copyright &copy; 2018
+   script(src='/bower_components/jquery/dist/jquery.js')
+   script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+   script(src='/js/main.js')
+     
